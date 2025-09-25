@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    int total = 0;
+    float average, percentage;
+
+    // Read marks for 5 subjects
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &marks[i]);
+    }
+
+    // Calculate total
+    for (int i = 0; i < 5; i++) {
+        total += marks[i];
+    }
+
+    // Calculate average and percentage
+    average = total / 5.0;
+    percentage = (total / 500.0) * 100;
+
+    // Print results with required formatting
+    printf("%d %.2f %.2f\n", total, average, percentage);
+
+    return 0;
+}
+
