@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    // Swap without using a third variable
+    a = a + b;  // sum of both
+    b = a - b;  // b becomes original a
+    a = a - b;  // a becomes original b
+
+    printf("%d %d\n", a, b);
+
+    return 0;
+}
