@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    double cm, meters, kilometers;
+
+    // Input length in centimeters
+    scanf("%lf", &cm);
+
+    // Conversion
+    meters = cm / 100.0;         // 1 m = 100 cm
+    kilometers = cm / 100000.0;  // 1 km = 100000 cm
+
+    // Print results with 2 decimal places
+    printf("%.2lf %.2lf\n", meters, kilometers);
+
+    return 0;
+}
