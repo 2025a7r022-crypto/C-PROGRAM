@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double P, R, CI, Amount;
+    int T;
+
+    // Input values
+    scanf("%lf %lf %d", &P, &R, &T);
+
+    // Compound Interest formula: A = P * (1 + R/100)^T
+    Amount = P * pow((1 + R / 100.0), T);
+
+    // CI = A - P
+    CI = Amount - P;
+
+    // Print result up to 2 decimal places
+    printf("%.2lf\n", CI);
+
+    return 0;
+}
