@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    double P, R, T, SI;
+
+    // Input principal, rate, and time
+    scanf("%lf %lf %lf", &P, &R, &T);
+
+    // Formula for Simple Interest
+    SI = (P * R * T) / 100.0;
+
+    // Print result up to 2 decimal places
+    printf("%.2lf\n", SI);
+
+    return 0;
+}
