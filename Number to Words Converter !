@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    // Array of words for digits 0 to 9
+    char *digits[] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+    // To handle the number digit by digit, first find the digits in reverse order
+    int reversed = 0, count = 0, temp = N;
+
+    // Special case if input is 0
+    if (N == 0) {
+        printf("Zero\n");
+        return 0;
+    }
+
+    // Reverse the number so that we can print digits in correct order later
+    while (temp > 0) {
+        reversed = reversed * 10 + temp % 10;
+        temp /= 10;
+        count++;
+    }
+
+    // Print digits from reversed number so original order is preserved
+    while (count--) {
+        int digit = reversed % 10;
+        printf("%s", digits[digit]);
+        if (count > 0) printf(" ");
+        reversed /= 10;
+    }
+    printf("\n");
+
+    return 0;
+}
