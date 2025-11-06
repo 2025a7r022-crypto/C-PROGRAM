@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    int A[100][100], B[100][100], Sum[100][100];
+    scanf("%d %d", &R, &C);
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            Sum[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("%d", Sum[i][j]);
+            if (j < C - 1) printf(" "); 
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
